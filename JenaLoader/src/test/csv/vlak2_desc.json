@@ -1,0 +1,36 @@
+{
+    "csvdir": "src/test/csv",
+    "config": {
+        "uri": "http://iko.edu/vlak2",
+        "generateDataProperties": true,
+        "generateBoolAs": "subclass",
+        "generateEnumAs": "subclass"
+    },
+    "data": [{
+            "dataType": "ENTITY",
+            "dataSource": "vlak2_data.csv",
+            "keyColumn": 0,
+            "concept": "Vlak",
+            "attributes": [{
+                    "column": 1,
+                    "type": "ENUM",
+                    "property": "do"
+                }]
+        }, {
+            "dataType": "ENTITY",
+            "dataSource": "vagon2_data.csv",
+            "keyColumn": 0,
+            "concept": "Vagon",
+            "attributes": [{
+                    "column": 1,
+                    "type": "OBJECT",
+                    "property": "ma",
+                    "objectRootConcept": "Vlak",
+                    "inverse": "-"
+                }, {
+                    "column": 2,
+                    "type": "ENUM",
+                    "property": "typ"
+                }]
+        }]
+}

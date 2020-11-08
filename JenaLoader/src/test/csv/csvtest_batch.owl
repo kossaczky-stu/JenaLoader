@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://iko.edu/test#"
+     xml:base="http://iko.edu/test"
+     xmlns:test="http://iko.edu/test#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://iko.edu/test"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iko.edu/test#dieta -->
+
+    <owl:ObjectProperty rdf:about="http://iko.edu/test#dieta"/>
+    
+
+
+    <!-- http://iko.edu/test#ma-clena -->
+
+    <owl:ObjectProperty rdf:about="http://iko.edu/test#ma-clena">
+        <rdfs:domain rdf:resource="http://iko.edu/test#C_Klub"/>
+        <rdfs:range rdf:resource="http://iko.edu/test#C_Osoba"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iko.edu/test#matka -->
+
+    <owl:ObjectProperty rdf:about="http://iko.edu/test#matka">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://iko.edu/test#C_Osoba"/>
+        <rdfs:domain rdf:resource="http://iko.edu/test#C_Osoba"/>
+        <owl:inverseOf rdf:resource="http://iko.edu/test#dieta"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iko.edu/test#titul -->
+
+    <owl:ObjectProperty rdf:about="http://iko.edu/test#titul">
+        <rdfs:domain rdf:resource="http://iko.edu/test#C_Osoba"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iko.edu/test#vlastni -->
+
+    <owl:ObjectProperty rdf:about="http://iko.edu/test#vlastni">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://iko.edu/test#C_Firma"/>
+        <rdfs:domain rdf:resource="http://iko.edu/test#C_Osoba"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iko.edu/test#meno -->
+
+    <owl:DatatypeProperty rdf:about="http://iko.edu/test#meno">
+        <rdfs:domain rdf:resource="http://iko.edu/test#C_Osoba"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iko.edu/test#vek -->
+
+    <owl:DatatypeProperty rdf:about="http://iko.edu/test#vek">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iko.edu/test#C_Osoba"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iko.edu/test#C_Firma -->
+
+    <owl:Class rdf:about="http://iko.edu/test#C_Firma"/>
+    
+
+
+    <!-- http://iko.edu/test#C_Klub -->
+
+    <owl:Class rdf:about="http://iko.edu/test#C_Klub"/>
+    
+
+
+    <!-- http://iko.edu/test#C_Org -->
+
+    <owl:Class rdf:about="http://iko.edu/test#C_Org"/>
+    
+
+
+    <!-- http://iko.edu/test#C_Osoba -->
+
+    <owl:Class rdf:about="http://iko.edu/test#C_Osoba"/>
+    
+
+
+    <!-- http://iko.edu/test#S_Osoba_NOT_muz -->
+
+    <owl:Class rdf:about="http://iko.edu/test#S_Osoba_NOT_muz">
+        <rdfs:subClassOf rdf:resource="http://iko.edu/test#C_Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iko.edu/test#S_Osoba_muz -->
+
+    <owl:Class rdf:about="http://iko.edu/test#S_Osoba_muz">
+        <rdfs:subClassOf rdf:resource="http://iko.edu/test#C_Osoba"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iko.edu/test#E_Judr. -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#E_Judr."/>
+    
+
+
+    <!-- http://iko.edu/test#E_MUDr. -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#E_MUDr."/>
+    
+
+
+    <!-- http://iko.edu/test#I_Org_Slovan -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Org_Slovan">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Org"/>
+        <ma-clena rdf:resource="http://iko.edu/test#I_Osoba_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Org_Slovnaft -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Org_Slovnaft">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Org"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Org_Smer -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Org_Smer">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Org"/>
+        <ma-clena rdf:resource="http://iko.edu/test#I_Osoba_1"/>
+        <ma-clena rdf:resource="http://iko.edu/test#I_Osoba_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Osoba_1 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Osoba_1">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Osoba"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Osoba_NOT_muz"/>
+        <vek rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</vek>
+        <meno rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anka</meno>
+        <titul rdf:resource="http://iko.edu/test#E_MUDr."/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Osoba_2 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Osoba_2">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Osoba"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Osoba_muz"/>
+        <vek rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</vek>
+        <meno rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robo</meno>
+        <titul rdf:resource="http://iko.edu/test#E_Judr."/>
+        <vlastni rdf:resource="http://iko.edu/test#I_Org_Slovnaft"/>
+        <matka rdf:resource="http://iko.edu/test#I_Osoba_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Osoba_3 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Osoba_3">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Osoba"/>
+        <meno rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bela</meno>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

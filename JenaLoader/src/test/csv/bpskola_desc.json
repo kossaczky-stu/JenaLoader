@@ -1,0 +1,51 @@
+{
+    "csvdir": "src/test/csv",
+    "config": {
+        "uri": "http://iko.edu/skola",
+        "generateDataProperties": true,
+        "generateBoolAs": "subclass",
+        "generateEnumAs": "subclass"
+    },
+    "data": [{
+            "dataType": "ENTITY",
+            "dataSource": "bposoba_data.csv",
+            "keyColumn": 0,
+            "concept": "Osoba",
+            "attributes": [{
+                    "column": 1,
+                    "type": "DATA",
+                    "property": "meno"
+                }, {
+                    "column": 2,
+                    "type": "DATA",
+                    "property": "email"
+                }]
+        }, {
+            "dataType": "ENTITY",
+            "dataSource": "bppredmet_data.csv",
+            "keyColumn": 0,
+            "concept": "Predmet",
+            "attributes": [{
+                    "column": 1,
+                    "type": "DATA",
+                    "property": "nazov"
+                }, {
+                    "column": 2,
+                    "type": "OBJECT",
+                    "property": "prednasajuci",
+                    "objectRootConcept": "Osoba"
+                }]
+        } , {
+            "dataType": "PAIR",
+            "dataSource": "bposobapredmet_data.csv",
+            "keyColumn": 0,
+            "concept": "Osoba",
+            "attributes": [{
+                    "column": 1,
+                    "type": "OBJECT",
+                    "property": "predmet",
+                    "objectRootConcept": "Predmet",
+                    "inverse": "student"
+                }]
+        }]
+}

@@ -1,0 +1,44 @@
+{
+    "connection":{
+	"user":"root",
+	"pwd":"lab2014",
+	"dburl":"jdbc:mysql://147.175.98.82:3306/iko_db?useSSL=false"
+        },
+    "config":{
+        "uri":"http://iko.edu/test",
+	"generateSubjectClassAssertion":true,
+	"generateObjectClassAssertion":false,
+	"generateSubjectClassDeclaration":false,
+	"generateObjectClassDeclaration":false,
+	"generateDataProperties":true,
+	"generateInverseProperty":false,
+	"generateFuncionalityRestriction":false,
+	"generateDomainRestriction":false,
+	"generateRangeRestriction":false,
+	"generateBoolAs":"subclass",
+	"generateEnumAs":"object"
+	},
+        
+    "data":[{
+        "dataType":"ENTITY",
+        "dataSource": 
+"SELECT ID, FILENAME, MALWARE FROM W3_SAMPLE WHERE ID>135 AND ID<=145",
+        "keyColumn": "ID",
+        "concept": "Prog",
+        "attributes":[{
+            "column": "FILENAME",
+            "type": "DATA",
+            "property": "file"
+            },{
+            "column": "MALWARE",
+            "type": "BOOL",
+            "property": "malw"
+            }]
+        }, 
+        {
+        "dataType":"TRIPPLE",
+        "dataSource":  
+"SELECT sample_fk, CONCAT(loadinprocess, '_', ininit, inload, inmem) as prop, loadmodule FROM W3_LOADACTION where loadinprocess like 'win%.exe' AND sample_fk>135 AND sample_fk<=145",
+        "concept": "Prog"
+    }]
+}

@@ -1,0 +1,8 @@
+COLUMN,     NAME,    TYPE,      MULT, DATATYPE, CONCEPT, RANGE, INVERSE
+1,          meno,    DATA,          ,         ,        ,      ,
+2,           vek,    DATA,  many2one,  INTEGER,        ,      ,
+3,           muz,    BOOL,          ,         ,        ,      ,
+4,         titul,    ENUM,          ,         ,        ,      ,
+5,         matka,  OBJECT,  many2one,         ,   Osoba,      , dieta
+6,       vlastni,  OBJECT,  one2many,         ,     Org, Firma,  
+7,      ma-clena,  OBJECT,          ,         ,     Org,  Klub, -

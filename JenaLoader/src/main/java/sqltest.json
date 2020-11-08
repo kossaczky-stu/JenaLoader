@@ -1,0 +1,62 @@
+{
+    "connection":{
+	"user":"root",
+	"pwd":"lab2014",
+	"dburl":"jdbc:mysql://147.175.98.82:3306/iko_db?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+        },
+    "config":{
+	"uri":"http://uim.fei/malw",
+	"generateDataProperties":true,
+	"generateBoolAs":"subclass",
+	"generateEnumAs":"subclass"
+	},
+        
+    "data":[{
+        "dataType":"ENTITY",
+        "dataSource": "SELECT ID, FILENAME, MALWARE FROM W3_SAMPLE WHERE ID > 135 AND ID < 146",
+        "keyColumn": "ID",
+        "concept": "Prog",
+        "attributes":[{
+            "column": "FILENAME",
+            "type": "DATA",
+            "property": "file"
+            },{
+            "column": "MALWARE",
+            "type": "BOOL",
+            "property": "malw"
+            }]
+        }, 
+        {
+        "dataType":"ENTITY",
+        "dataSource":  "SELECT ID, sample_fk as PFK, LOADINPROCESS, LOADMODULE, ININIT, INLOAD, INMEM FROM W3_LOADACTION WHERE sample_fk > 135 AND sample_fk < 146",
+        "keyColumn": "ID",
+        "concept": "Akcia",
+        "attributes":[{
+            "column": "PFK",
+            "type": "OBJECT",
+            "property": "does",
+            "inverse": "-",
+            "objectRootConcept": "Prog"
+        },{
+            "column": "LOADINPROCESS",
+            "type": "DATA",
+            "property": "loadsIn"
+        },{
+            "column": "INLOAD",
+            "type": "BOOL",
+            "property": "load"
+        },{
+            "column": "INMEM",
+            "type": "BOOL",
+            "property": "mem"
+        },{
+            "column": "ININIT",
+            "type": "BOOL",
+            "property": "init"
+        },{
+            "column": "LOADMODULE",
+            "type": "DATA",
+            "property": "module"
+        }]
+    }]
+}

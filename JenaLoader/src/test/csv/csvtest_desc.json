@@ -1,0 +1,64 @@
+{
+    "csvdir":"src/test/csv",
+    "config":{
+	"uri":"http://iko.edu/test",
+	"generateSubjectClassDeclaration":false,
+	"generateObjectClassDeclaration":false,
+	"generateSubjectClassAssertion":true,
+	"generateObjectClassAssertion":true,
+	"generateDataProperties":true,
+	"generateInverseProperty":true,
+	"generateFuncionalityRestriction":true,
+	"generateDomainRestriction":true,
+	"generateRangeRestriction":true,
+	"generateBoolAs":"subclass",
+	"generateEnumAs":"object"
+	},
+        
+    "data":[{
+        "dataType":"ENTITY",
+        "dataSource":"csvtest_data.csv",
+        "keyColumn":0,
+        "concept":"Osoba",
+        "attributes":[{
+            "column":1,
+            "type":"DATA",
+            "property":"meno"
+        },{
+            "column":2,
+            "type":"DATA",
+            "property":"vek",
+            "multiplicity": "MANY2ONE",
+            "datatype":"INTEGER"
+        },{
+            "column":3,
+            "type":"BOOL",
+            "property":"muz"
+        },{
+            "column":4,
+            "type":"ENUM",
+            "property":"titul"
+        },{
+            "column":5,
+            "type":"OBJECT",
+            "property":"matka",
+            "multiplicity": "MANY2ONE",
+            "objectRootConcept": "Osoba",
+            "inverse": "dieta"
+        },{
+            "column":6,
+            "type":"OBJECT",
+            "property":"vlastni",
+            "multiplicity": "ONE2MANY",
+            "objectRootConcept": "Org",
+            "objectRangeConcept": "Firma"
+        },{
+            "column":7,
+            "type":"OBJECT",
+            "property":"ma-clena",
+            "objectRootConcept": "Org",
+            "objectRangeConcept": "Klub",
+            "inverse": "-"
+        }]
+    }]
+}

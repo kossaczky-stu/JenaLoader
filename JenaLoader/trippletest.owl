@@ -1,0 +1,589 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://iko.edu/test#"
+     xml:base="http://iko.edu/test"
+     xmlns:test="http://iko.edu/test#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://iko.edu/test"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iko.edu/test#file -->
+
+    <owl:DatatypeProperty rdf:about="http://iko.edu/test#file"/>
+    
+
+
+    <!-- http://iko.edu/test#winlister.exe_011 -->
+
+    <owl:DatatypeProperty rdf:about="http://iko.edu/test#winlister.exe_011"/>
+    
+
+
+    <!-- http://iko.edu/test#winlister.exe_111 -->
+
+    <owl:DatatypeProperty rdf:about="http://iko.edu/test#winlister.exe_111"/>
+    
+
+
+    <!-- http://iko.edu/test#winlogon.exe_011 -->
+
+    <owl:DatatypeProperty rdf:about="http://iko.edu/test#winlogon.exe_011"/>
+    
+
+
+    <!-- http://iko.edu/test#winlogon.exe_111 -->
+
+    <owl:DatatypeProperty rdf:about="http://iko.edu/test#winlogon.exe_111"/>
+    
+
+
+    <!-- http://iko.edu/test#winmine.exe_011 -->
+
+    <owl:DatatypeProperty rdf:about="http://iko.edu/test#winmine.exe_011"/>
+    
+
+
+    <!-- http://iko.edu/test#winmine.exe_111 -->
+
+    <owl:DatatypeProperty rdf:about="http://iko.edu/test#winmine.exe_111"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iko.edu/test#C_Prog -->
+
+    <owl:Class rdf:about="http://iko.edu/test#C_Prog"/>
+    
+
+
+    <!-- http://iko.edu/test#S_Prog_NOT_malw -->
+
+    <owl:Class rdf:about="http://iko.edu/test#S_Prog_NOT_malw">
+        <rdfs:subClassOf rdf:resource="http://iko.edu/test#C_Prog"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iko.edu/test#S_Prog_malw -->
+
+    <owl:Class rdf:about="http://iko.edu/test#S_Prog_malw">
+        <rdfs:subClassOf rdf:resource="http://iko.edu/test#C_Prog"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iko.edu/test#I_Prog_136 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Prog_136">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Prog"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Prog_malw"/>
+        <file rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06d6d863e627db0c879e843dd0cd1c1d5190622e_exe</file>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\activeds.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\adsldpc.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\advapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\apphelp.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\atl.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\authz.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\clbcatq.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comctl32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comdlg32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comres.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\crypt32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\cscdll.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\cscui.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\dimsntfy.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\gdi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\imagehlp.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\iphlpapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\kernel32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\midimap.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\mpr.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\mprapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.drv</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msasn1.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msgina.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msv1_0.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msvcrt.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\nddeapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\netapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntdll.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntmarta.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\odbc32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\odbcint.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ole32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\oleaut32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\profmap.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\psapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\regapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rpcrt4.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rsaenh.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rtutils.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\samlib.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\secur32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\setupapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sfc.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sfc_os.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shell32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shlwapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shsvcs.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sxs.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\user32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\userenv.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\uxtheme.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\version.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wdmaud.drv</winlogon.exe_111>
+        <winlogon.exe_011 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winlogon.exe</winlogon.exe_011>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winmm.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winscard.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winspool.drv</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winsta.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wintrust.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wldap32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wlnotify.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ws2_32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ws2help.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wtsapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\xpsp2res.dll</winlogon.exe_111>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Prog_137 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Prog_137">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Prog"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Prog_malw"/>
+        <file rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06180cbcd088f383973349f963b1297ef7a1211c_exe</file>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\activeds.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\adsldpc.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\advapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\apphelp.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\atl.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\authz.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\clbcatq.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comctl32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comdlg32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comres.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\crypt32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\cscdll.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\cscui.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\dimsntfy.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\gdi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\imagehlp.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\iphlpapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\kernel32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\midimap.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\mpr.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\mprapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.drv</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msasn1.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msgina.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msv1_0.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msvcrt.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\nddeapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\netapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntdll.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntmarta.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\odbc32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\odbcint.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ole32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\oleaut32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\profmap.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\psapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\regapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rpcrt4.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rsaenh.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rtutils.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\samlib.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\secur32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\setupapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sfc.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sfc_os.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shell32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shlwapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shsvcs.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sxs.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\user32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\userenv.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\uxtheme.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\version.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wdmaud.drv</winlogon.exe_111>
+        <winlogon.exe_011 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winlogon.exe</winlogon.exe_011>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winmm.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winscard.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winspool.drv</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winsta.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wintrust.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wldap32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wlnotify.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ws2_32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ws2help.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wtsapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\xpsp2res.dll</winlogon.exe_111>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Prog_138 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Prog_138">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Prog"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Prog_malw"/>
+        <file rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05b8b92fdd8036684a0704cc977961dc3184735c_exe</file>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\activeds.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\adsldpc.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\advapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\apphelp.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\atl.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\authz.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\clbcatq.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comctl32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comdlg32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comres.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\crypt32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\cscdll.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\cscui.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\dimsntfy.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\gdi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\imagehlp.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\iphlpapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\kernel32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\midimap.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\mpr.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\mprapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.drv</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msasn1.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msgina.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msv1_0.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msvcrt.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\nddeapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\netapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntdll.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntmarta.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\odbc32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\odbcint.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ole32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\oleaut32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\profmap.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\psapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\regapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rpcrt4.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rsaenh.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rtutils.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\samlib.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\secur32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\setupapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sfc.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sfc_os.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shell32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shlwapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shsvcs.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sxs.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\user32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\userenv.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\uxtheme.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\version.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wdmaud.drv</winlogon.exe_111>
+        <winlogon.exe_011 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winlogon.exe</winlogon.exe_011>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winmm.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winscard.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winspool.drv</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winsta.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wintrust.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wldap32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wlnotify.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ws2_32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ws2help.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wtsapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\xpsp2res.dll</winlogon.exe_111>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Prog_139 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Prog_139">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Prog"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Prog_malw"/>
+        <file rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0469ca9bae2f3d9043258778a1a206e662124a7b_exe</file>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\activeds.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\adsldpc.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\advapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\apphelp.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\atl.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\authz.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\clbcatq.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comctl32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comdlg32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comres.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\crypt32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\cscdll.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\cscui.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\dimsntfy.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\gdi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\imagehlp.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\iphlpapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\kernel32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\midimap.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\mpr.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\mprapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.drv</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msasn1.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msgina.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msv1_0.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msvcrt.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\nddeapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\netapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntdll.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntmarta.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\odbc32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\odbcint.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ole32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\oleaut32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\profmap.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\psapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\regapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rpcrt4.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rsaenh.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rtutils.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\samlib.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\secur32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\setupapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sfc.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sfc_os.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shell32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shlwapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shsvcs.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sxs.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\user32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\userenv.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\uxtheme.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\version.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wdmaud.drv</winlogon.exe_111>
+        <winlogon.exe_011 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winlogon.exe</winlogon.exe_011>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winmm.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winscard.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winspool.drv</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winsta.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wintrust.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wldap32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wlnotify.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ws2_32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ws2help.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wtsapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\xpsp2res.dll</winlogon.exe_111>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Prog_140 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Prog_140">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Prog"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Prog_malw"/>
+        <file rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0330fa4850bf5a2b602f3ff0fc3dea74440218f9_exe</file>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\activeds.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\adsldpc.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\advapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\apphelp.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\atl.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\authz.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\clbcatq.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comctl32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comdlg32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comres.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\crypt32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\cscdll.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\cscui.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\dimsntfy.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\gdi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\imagehlp.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\iphlpapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\kernel32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\midimap.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\mpr.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\mprapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.drv</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msasn1.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msgina.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msv1_0.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msvcrt.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\nddeapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\netapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntdll.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntmarta.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\odbc32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\odbcint.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ole32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\oleaut32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\profmap.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\psapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\regapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rpcrt4.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rsaenh.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rtutils.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\samlib.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\secur32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\setupapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sfc.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sfc_os.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shell32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shlwapi.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shsvcs.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\sxs.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\user32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\userenv.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\uxtheme.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\version.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wdmaud.drv</winlogon.exe_111>
+        <winlogon.exe_011 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winlogon.exe</winlogon.exe_011>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winmm.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winscard.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winspool.drv</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winsta.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wintrust.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wldap32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wlnotify.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ws2_32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ws2help.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\wtsapi32.dll</winlogon.exe_111>
+        <winlogon.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\xpsp2res.dll</winlogon.exe_111>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Prog_141 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Prog_141">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Prog"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Prog_NOT_malw"/>
+        <file rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zsnes_exe</file>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Prog_142 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Prog_142">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Prog"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Prog_NOT_malw"/>
+        <file rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xnview_exe</file>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Prog_143 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Prog_143">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Prog"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Prog_NOT_malw"/>
+        <file rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wordpad_exe</file>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Prog_144 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Prog_144">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Prog"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Prog_NOT_malw"/>
+        <winmine.exe_011 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\;F:\vboxsrv\ciste_test\winmine.exe</winmine.exe_011>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\AppPatch\AcGenral.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\advapi32.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\gdi32.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\kernel32.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msacm32.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msvcrt.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntdll.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ole32.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\oleaut32.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rpcrt4.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\secur32.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shell32.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shimeng.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shlwapi.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\user32.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\userenv.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\uxtheme.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\version.dll</winmine.exe_111>
+        <winmine.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\winmm.dll</winmine.exe_111>
+        <file rdf:datatype="http://www.w3.org/2001/XMLSchema#string">winmine_exe</file>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iko.edu/test#I_Prog_145 -->
+
+    <owl:NamedIndividual rdf:about="http://iko.edu/test#I_Prog_145">
+        <rdf:type rdf:resource="http://iko.edu/test#C_Prog"/>
+        <rdf:type rdf:resource="http://iko.edu/test#S_Prog_NOT_malw"/>
+        <winlister.exe_011 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\;F:\vboxsrv\ciste_test\winlister\winlister.exe</winlister.exe_011>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\advapi32.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\comdlg32.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\gdi32.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\kernel32.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\msvcrt.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\ntdll.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\psapi.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\rpcrt4.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\secur32.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shell32.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\shlwapi.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\user32.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\uxtheme.dll</winlister.exe_111>
+        <winlister.exe_111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\WINDOWS\system32\version.dll</winlister.exe_111>
+        <file rdf:datatype="http://www.w3.org/2001/XMLSchema#string">winlister_exe</file>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

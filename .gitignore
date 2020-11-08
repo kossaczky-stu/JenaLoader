@@ -1,0 +1,21 @@
+# Maven specific #
+target/
+
+# Ant netbeans specific#
+nbproject/private/
+build/
+dist/
+
+# Netbeans specific #
+nb-configuration.xml
+nbaction.xml
+
+# Class and Packages - mozeme pre istotu tiez ignorovat #
+*.class
+*.jar
+*.war
+*.ear
+
+# JenaLoader specific #
+catalog-*.xml
+
