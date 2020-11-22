@@ -19,7 +19,10 @@ import org.apache.jena.ontology.ObjectProperty;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
+import org.apache.jena.query.ReadWrite;
+import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdfconnection.RDFConnection;
 import org.apache.jena.rdfconnection.RDFConnectionFactory;
@@ -81,6 +84,65 @@ public class JenaLoader {
 
     public void loadPairs(String rootConcept, String rootObjectConcept, String property, String inverseProperty,  DataSource data) {
         // BP: TODO
+        int counter = 0;
+
+        tbox = null;
+        tbox = newOnto();
+
+        abox = null;
+        abox = newOnto();
+
+        // Pretoze do funkcii setDomain a setRange isli dat len Resource
+        // Preto som si vytvoril Resourcy s menami danych tried - v podstate to su dane triedy lenze v resourcoch
+        // Do prveho Resoucu som vytvoril string pomocou funkcie na vytvaranie tried do ktorej som dal nazov prvej triedy
+        // Do druheho Resourcu som spravil to iste len s nazvom druhej triedy
+        Resource r1 = abox.createResource(config.name4entityclass(rootConcept));
+        Resource r2 = abox.createResource(config.name4entityclass(rootObjectConcept));
+
+        // Vytvoril som Object Property s nazvom danej property ktory som dostal ako argument
+        ObjectProperty op = tbox.createObjectProperty(config.name4property(property));
+        // Priradil som danej Property Domain - to som nastavil prvu triedu
+        op.setDomain(r1);
+        // Ako Range som nastavil druhu triedu
+        op.setRange(r2);
+
+        // Kedze som to vytvaral do tbox a abox tak som to uploadol a zavrel
+        // Najprv abox potom tbox - tak to bolo aj vo funkcii loadEntity
+        // Cize po tychto ifoch by tam uz mala byt dana property a uz si len budem nacitavat individualov a tuto property
+        if (abox != null) {
+            uploadOnto(abox, ABOX);
+            abox.close();
+            abox = null;
+        }
+
+        if (tbox != null) {
+            uploadOnto(tbox, TBOX);
+            tbox.close();
+            tbox=null;
+        }
+
+        // Pripojil som sa do tej fuseki databazy aby som odtial mohol tahat informacie
+        try (RDFConnection conn = RDFConnectionFactory.connectPW(dsUrl + gsp, user, pwd)) {
+            System.out.println("SUCCESS CONNECT");
+            // do premennej m som si ulozil cely Model
+            Model m = conn.fetch();
+            // Tento while cyklus pojde pokial budu data pretoze som vyuzil funkciu getNext ktora vrati true ak nejake data su
+            while(data.getNext()){
+                // Do nasledujucich resourcou som si nacital individualov z idckami ktore beriem z premennej data
+                // Do prveho resourcu davam data z 0-teho stlpca
+                // DO druheho resourcu davam data z 1-veho stlpca
+                Resource re1 = m.getResource(config.name4individual(rootConcept, data.asString(0)));
+                Resource re2 = m.getResource(config.name4individual(rootObjectConcept, data.asString(1)));
+                // Prvemu resourcu priradujem danu property - prvy argument, na druhy resource - druhy argument
+                re1.addProperty(m.getProperty(config.name4property(property)), re2);
+                // Nakoniec to naloadujem do databazy
+                conn.load(m);
+                counter++;
+            }
+            System.out.println(counter + " added properities");
+        } catch (Exception e) {
+            System.out.println("Exeption in uploadOnto " + loadcnt + ": " + e.getMessage());
+        }
     }
 
 

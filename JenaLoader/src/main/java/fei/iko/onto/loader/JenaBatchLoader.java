@@ -40,10 +40,10 @@ public class JenaBatchLoader extends JenaLoader {
                 break;
             case PAIR:
                  String rootConcept = dd.rootConcept; 
-                 String objectRootConcept = dd.attributes.get(1).getObjectRootConcept();
-                 String property = dd.attributes.get(1).getProperty();         // moze byt null
-                 String inverseProperty = dd.attributes.get(1).getInverse();   // moze byt null
-                 loadPairs(rootConcept, objectRootConcept , property, inverseProperty, data); 
+                 String objectRootConcept = dd.attributes.get(0).getObjectRootConcept();
+                 String property = dd.attributes.get(0).getProperty();         // moze byt null
+                 String inverseProperty = dd.attributes.get(0).getInverse();   // moze byt null
+                 loadPairs(rootConcept, objectRootConcept , property, inverseProperty, data);
                 break;
             case TRIPPLE:
                 //loadDataTripples(td.rootConcept, data);
