@@ -19,10 +19,8 @@ import org.apache.jena.ontology.ObjectProperty;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
-import org.apache.jena.query.ReadWrite;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdfconnection.RDFConnection;
 import org.apache.jena.rdfconnection.RDFConnectionFactory;
@@ -85,7 +83,7 @@ public class JenaLoader {
     public void loadPairs(String rootConcept, String rootObjectConcept, String property, String inverseProperty,  DataSource data) {
         // BP: TODO
         int counter = 0;
-
+        
         tbox = null;
         tbox = newOnto();
 
@@ -99,12 +97,37 @@ public class JenaLoader {
         Resource r1 = abox.createResource(config.name4entityclass(rootConcept));
         Resource r2 = abox.createResource(config.name4entityclass(rootObjectConcept));
 
-        // Vytvoril som Object Property s nazvom danej property ktory som dostal ako argument
-        ObjectProperty op = tbox.createObjectProperty(config.name4property(property));
-        // Priradil som danej Property Domain - to som nastavil prvu triedu
-        op.setDomain(r1);
-        // Ako Range som nastavil druhu triedu
-        op.setRange(r2);
+        // AK je zadana len property
+        if(property != null && inverseProperty == null) {
+            // Vytvoril som Object Property s nazvom danej property ktory som dostal ako argument
+            ObjectProperty op = tbox.createObjectProperty(config.name4property(property));
+            // Priradil som danej Property Domain - to som nastavil prvu triedu
+            op.setDomain(r1);
+            // Ako Range som nastavil druhu triedu
+            op.setRange(r2);
+        // Ak je zadana len inverseProperty
+        }else if(property == null && inverseProperty != null){
+            // VYtvoril som Object Property s nazvom danej inverseProperty
+            ObjectProperty op = tbox.createObjectProperty(config.name4property(inverseProperty));
+            // Naopak som setol domenu a range kedze to je inverse property
+            // CIze do domeny som dal resource 2 a do range som dal resource 1
+            op.setDomain(r2);
+            op.setRange(r1);
+        // Ak su zadane obe
+        }else if(property != null && inverseProperty != null){
+            // Vytvoril som Opject Property danej property a setol som domain a range ako v prvom pripade
+            ObjectProperty op = tbox.createObjectProperty(config.name4property(property));
+            op.setDomain(r1);
+            op.setRange(r2);
+            // Vytvoril som aj inverseProperty ktorej som setol opacny domain a range a zadal som ze je inverzna prvej
+            ObjectProperty op2 = tbox.createObjectProperty(config.name4property(inverseProperty));
+            op2.setDomain(r2);
+            op2.setRange(r1);
+            op2.addInverseOf(op);
+        }else{
+            // Some Error
+            System.out.println("Error: property and inverseProperty are null");
+        }
 
         // Kedze som to vytvaral do tbox a abox tak som to uploadol a zavrel
         // Najprv abox potom tbox - tak to bolo aj vo funkcii loadEntity
@@ -133,13 +156,32 @@ public class JenaLoader {
                 // DO druheho resourcu davam data z 1-veho stlpca
                 Resource re1 = m.getResource(config.name4individual(rootConcept, data.asString(0)));
                 Resource re2 = m.getResource(config.name4individual(rootObjectConcept, data.asString(1)));
-                // Prvemu resourcu priradujem danu property - prvy argument, na druhy resource - druhy argument
-                re1.addProperty(m.getProperty(config.name4property(property)), re2);
+                //Ak je zadana len property
+                if(property != null && inverseProperty == null) {
+                    // Prvemu resourcu priradujem danu property - prvy argument, na druhy resource - druhy argument
+                    re1.addProperty(m.getProperty(config.name4property(property)), re2);
+                    counter++;
+                // Ak je zadana len inverseProperty
+                }else if(property == null && inverseProperty != null){
+                    // Druhemu resourcu priradujem danu inverseProperty - prvy argument, na prvy resource - druhy argument
+                    // Vlastne sme vymenili resourci pretoze to je inverzna property
+                    re2.addProperty(m.getProperty(config.name4property(inverseProperty)), re1);
+                    counter++;
+                // AK su zadane obe
+                }else if(property != null && inverseProperty != null){
+                    // Prvemu resourcu priradujem danu property - prvy argument, na druhy resource - druhy argument
+                    // Vlastne take iste ako ked je zadana len property pretoze inverse property sme zadali vyssie v kode
+                    // A sme sa dohodli ze ked budu zadane obe tak staci tam len tu inverznu pridat a nemusim ju priradovat
+                    // kazdemu individualovi zvlast
+                    re1.addProperty(m.getProperty(config.name4property(property)), re2);
+                    counter++;
+                }else{
+
+                }
                 // Nakoniec to naloadujem do databazy
                 conn.load(m);
-                counter++;
             }
-            System.out.println(counter + " added properities");
+            System.out.println(counter + " added properities to individuals");
         } catch (Exception e) {
             System.out.println("Exeption in uploadOnto " + loadcnt + ": " + e.getMessage());
         }
