@@ -1,0 +1,24 @@
+@prefix :      <http://fei.edu/iko#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+:pe_tls1  a     :pe_tls .
+
+:has_section  a  owl:ObjectProperty .
+
+:has_signature  a  owl:ObjectProperty .
+
+:ae4c42d70e110f745793c0ab49b6a153
+        a       :entropyMID .
+
+:02f3960792fd0696d92bec8adc5bdd45
+        a               :OKware , :behavior_load_api ;
+        :has_section    :c66cec1b47f0fb68db5ebf82f8b0288d , :ae4c42d70e110f745793c0ab49b6a153 ;
+        :has_signature  :pe_signature1 ;
+        :has_tls        :pe_tls1 .
+
+:has_tls  a     owl:ObjectProperty .
+
+:pe_signature1  a  :pe_signature .
