@@ -1,0 +1,8 @@
+{
+    "prefix": "http://fei.edu/iko#",
+    "pathConfig": {
+        "/*": {
+            "included": true
+        }
+    }
+}

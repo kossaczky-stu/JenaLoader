@@ -6,13 +6,9 @@ import fei.iko.onto.domtoowl.components.JsonOWLBuilder;
 import fei.iko.onto.domtoowl.components.OwlWriter;
 import fei.iko.onto.domtoowl.owlnode.BuilderConfig;
 import java.io.File;
-import org.apache.log4j.Appender;
 import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.ConsoleAppender;
-import static org.apache.log4j.ConsoleAppender.SYSTEM_OUT;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PatternLayout;
 
 /**
  *
@@ -27,11 +23,11 @@ public class AppMain {
         ObjectMapper mapper = new ObjectMapper();
 
         // Loading Builder Configuration
-        BuilderConfig bconfig = mapper.readValue(new File("src/test/json/ps_conf.json"), BuilderConfig.class);
+        BuilderConfig bconfig = mapper.readValue(new File("src/test/json/simple2_conf.json"), BuilderConfig.class);
         // processor component
         JsonOWLBuilder builder = new JsonOWLBuilder(bconfig);        
         // data producer component
-        JsonFileSource source = new JsonFileSource("src/test/json/ps_data.json");
+        JsonFileSource source = new JsonFileSource("src/test/json/simple_data.json");
         // data consumer component
         OwlWriter writer = new OwlWriter("src/test/json/result.ttl");
 
