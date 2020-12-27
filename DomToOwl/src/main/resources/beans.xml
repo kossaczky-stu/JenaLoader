@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.18.xsd
+">
+    <!--<bean id="owlconfig" class="fei.iko.onto.domtoowl.components.OwlConfig"/> neviem ci bude treba -->
+    <bean id="config" class="fei.iko.onto.domtoowl.components.DomConfig"/>
+    <bean id="datasource" class="fei.iko.onto.domtoowl.components.JsonFileSource"/>
+    <bean id="owlbuider" class="fei.iko.onto.domtoowl.components.JsonOWLBuilder" autowire="byName" />
+    <bean id="writer" class="fei.iko.onto.domtoowl.components.OwlWriter"autowire="byName" />
+
+</beans>

@@ -1,0 +1,41 @@
+{
+    "md5": "02f3960792fd0696d92bec8adc5bdd45",
+    "label": 0,
+    "general": {
+        "has_relocations": 1,
+        "has_resources": 1,
+        "has_signature": 1,
+        "has_tls": 1,
+        "symbols": 0
+    },
+    "section": {
+        "entry": ".text",
+        "sections": [{
+                "name": ".rdata",
+                "size": 124416,
+                "entropy": 5.1298819605787465,
+                "vsize": 124120,
+                "props": ["CNT_INITIALIZED_DATA", "MEM_READ"]
+            }, {
+                "name": ".tls",
+                "size": 512,
+                "entropy": 0.39124356362925566,
+                "vsize": 13,
+                "props": ["CNT_INITIALIZED_DATA", "MEM_READ", "MEM_WRITE"]
+            }]
+    },
+    "imports": {
+        "KERNEL32.dll": ["FreeLibrary", "GetProcAddress", "LoadLibraryW", "GetProcessId",  "LoadLibraryExW", "HeapFree", "HeapAlloc"],
+        "VERSION.dll": ["VerQueryValueW"]
+    },
+    "exports": [],
+    "datadirectories": [{
+            "name": "EXPORT_TABLE",
+            "size": 0,
+            "virtual_address": 0
+        }, {
+            "name": "RESOURCE_TABLE",
+            "size": 382984,
+            "virtual_address": 446464
+        }]
+}
