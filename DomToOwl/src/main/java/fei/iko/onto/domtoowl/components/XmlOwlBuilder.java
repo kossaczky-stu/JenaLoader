@@ -23,52 +23,51 @@ public class XmlOwlBuilder extends OwlBuilder<Node> {
         if(data.getNodeType() == Node.ELEMENT_NODE){
             //Ak ano tak ho ulozime do premennej typu Element - pretypujeme lebo ma viac fukcii
             Element elData = (Element) data;
-            // Zistime ci to nie je pole - poliam som dal atribut type = array
-            if(elData.hasAttributes()){
-                if(elData.getAttribute("type").equals("array")){
-                    if (nconfig == null) {
-                        nconfig = new NodeConfig();
+            // Zistime ci ma Child Elementy ak ano je to bud pole alebo objekt
+            if(hasChildElements(elData)){
+                // Zistime ci to nie je pole - poliam som dal atribut type = array
+                if(elData.hasAttributes()){
+                    if(elData.getAttribute("type").equals("array")){
+                        if (nconfig == null) {
+                            nconfig = new NodeConfig();
+                        }
+                        newNode = createArrayNode(path, elData);
                     }
-                    newNode = createArrayNode(path, elData);
-                }
-            // Ak to neni pole
-            }else{
-                // Zistime ci to je Object tym ze ma pocet child Nodov vyssi ako 1
-                // Kedze kazdy element ma minimalne 1 child Node a to text
-                if(elData.getChildNodes().getLength() > 1){
+                // Ak to neni pole je to objekt
+                }else{
                     if (nconfig == null) {
                         nconfig = new NodeConfig();
                     }
                     newNode = createObjectNode(path, elData);
-                // AK to neni ani objekt
-                }else{
-                    if (nconfig == null) {
-                        return null;
-                    }
-                    // Zistujeme aky typ cisla to je neviem ci je aj lepsi sposob ale ostatne mi nefungovalo tak
-                    // som to nechal riesene pomocou try catch
-                    // V prvom try sa do premennej pokusa parsnut Integer z textu daneho Elementu
-                    // ak hodi error tak sa zachyti a neurobi nic cize premenna ostala prazdna
-                    try{
-                        long premenna = Integer.parseInt(elData.getTextContent());
-                        newNode = new OwlLongNode(premenna);
-                    }catch(NumberFormatException e){
-                        //not int
-                    }
-                    // Ak premenna ostala prazdna tak to iste skusame ale na Float
-                    try{
-                        if(newNode == null) {
-                            float premenna = Float.parseFloat(elData.getTextContent());
-                            newNode = new OwlFloatNode(premenna);
-                        }
-                    }catch(NumberFormatException e){
-                        //not float
-                    }
-                    // Ak je premenna stale prazdna tak sa necha ako string pretoze metoda getTextContent
-                    // vracia java.lang.String
+                }
+            // Ak nema child elementy tak to bude bud text, int, float alebo ine
+            }else{
+                if (nconfig == null) {
+                    return null;
+                }
+                // Zistujeme aky typ cisla to je neviem ci je aj lepsi sposob ale ostatne mi nefungovalo tak
+                // som to nechal riesene pomocou try catch
+                // V prvom try sa do premennej pokusa parsnut Integer z textu daneho Elementu
+                // ak hodi error tak sa zachyti a neurobi nic cize premenna ostala prazdna
+                try{
+                    long premenna = Integer.parseInt(elData.getTextContent());
+                    newNode = new OwlLongNode(premenna);
+                }catch(NumberFormatException e){
+                    //not int
+                }
+                // Ak premenna ostala prazdna tak to iste skusame ale na Float
+                try{
                     if(newNode == null) {
-                        newNode = new OwlStringNode(elData.getTextContent());
+                        float premenna = Float.parseFloat(elData.getTextContent());
+                        newNode = new OwlFloatNode(premenna);
                     }
+                }catch(NumberFormatException e){
+                    //not float
+                }
+                // Ak je premenna stale prazdna tak sa necha ako string pretoze metoda getTextContent
+                // vracia java.lang.String
+                if(newNode == null) {
+                    newNode = new OwlStringNode(elData.getTextContent());
                 }
             }
 
@@ -135,5 +134,15 @@ public class XmlOwlBuilder extends OwlBuilder<Node> {
             return null;
         }
         return new OwlArrayNode(children);
+    }
+
+    private boolean hasChildElements(Element el) {
+        NodeList children = el.getChildNodes();
+        for (int i = 0; i < children.getLength(); i++) {
+            if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                return true;
+            }
+        }
+        return false;
     }
 }
